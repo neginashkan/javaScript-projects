@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./logo.svg" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Calculate the tip for your restaurant bill quickly and easily with our Tip Calculator. Enjoy a hassle-free experience when you use our simple calculator to find the optimal tip amount."
+    />
+    <title>Tip Calculator - Calculate Tip Easily</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tip Calculator - Calculate Tip Easily</h1>
+      <img class="icon" src="./logo.svg" alt="splitter icon" title="SPLITTER" />
+      <div class="tip-calculator">
+        <div class="tip-calculate">
+          <div>
+            <h2 class="bill-amount-title">Bill</h2>
+            <input
+              class="bill-amount-input"
+              type="text"
+              autocomplete="off"
+              autofocus
+            />
+          </div>
+          <h2 class="tip-amount-title">Select Tip %</h2>
+          <div class="tip-percentage-buttons">
+            <!-- TODO:
+                    ADD BY JAVASCRIPT -->
+            <button class="tip-button" value="5">5%</button>
+            <button class="tip-button" value="10">10%</button>
+            <button class="tip-button" value="15">15%</button>
+            <button class="tip-button" value="20">20%</button>
+            <button class="tip-button" value="25">50%</button>
+            <button class="tip-button custom-button" value="">Custom</button>
+          </div>
+          <div>
+            <h2 class="people-amount-title">Number of People</h2>
+            <input
+              class="people-amount-input"
+              type="text"
+              autocomplete="off"
+              autofocus
+            />
+          </div>
+        </div>
+        <div class="tip-result">
+          <!-- TODO:
+            ADD BY JAVASCRIPT -->
+          <div class="tip--result--style">
+            <div class="result-title-style">
+              <h3>Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+            <div class="result-number-style">$4.27</div>
+          </div>
+          <div class="tip--result--styles">
+            <div class="result-title-style">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <div class="result-number-style">$32.79</div>
+          </div>
+          <button class="reset-button">RESET</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
