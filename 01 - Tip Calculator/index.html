@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8587bf19c3.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,61 +23,52 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <img class="icon" src="./logo.svg" alt="splitter icon" title="SPLITTER" />
+    <h1>Tip Calculator - Calculate Tip Easily</h1>
     <div class="container">
-      <h1>Tip Calculator - Calculate Tip Easily</h1>
-      <img class="icon" src="./logo.svg" alt="splitter icon" title="SPLITTER" />
       <div class="tip-calculator">
-        <div class="tip-calculate">
-          <div>
+        <div class="amount-style">
+          <div class="error-massage-container">
             <h2 class="bill-amount-title">Bill</h2>
-            <input
-              class="bill-amount-input"
-              type="text"
-              autocomplete="off"
-              autofocus
-            />
+            <h2 class="error">Can't be zero</h2>
           </div>
-          <h2 class="tip-amount-title">Select Tip %</h2>
-          <div class="tip-percentage-buttons">
-            <!-- TODO:
-                    ADD BY JAVASCRIPT -->
-            <button class="tip-button" value="5">5%</button>
-            <button class="tip-button" value="10">10%</button>
-            <button class="tip-button" value="15">15%</button>
-            <button class="tip-button" value="20">20%</button>
-            <button class="tip-button" value="25">50%</button>
-            <button class="tip-button custom-button" value="">Custom</button>
-          </div>
-          <div>
-            <h2 class="people-amount-title">Number of People</h2>
-            <input
-              class="people-amount-input"
-              type="text"
-              autocomplete="off"
-              autofocus
-            />
-          </div>
+          <i class="fa-solid fa-dollar-sign input-icon"></i>
+          <input
+            class="bill-amount-input"
+            type="text"
+            autocomplete="off"
+            autofocus
+            placeholder="0"
+            oninput="amountInput(event)"
+          />
         </div>
-        <div class="tip-result">
-          <!-- TODO:
-            ADD BY JAVASCRIPT -->
-          <div class="tip--result--style">
-            <div class="result-title-style">
-              <h3>Tip Amount</h3>
-              <p>/ person</p>
-            </div>
-            <div class="result-number-style">$4.27</div>
+        <h2 class="tip-amount-title">Select Tip %</h2>
+        <div class="tip-percentage-buttons" id="tip-percentage-buttons">
+          <!--  ADD BY JAVASCRIPT -->
+        </div>
+        <div class="amount-style">
+          <div class="error-massage-container">
+            <h2 class="people-amount-title">Number of People</h2>
+            <h2 class="error">Can't be zero</h2>
           </div>
-          <div class="tip--result--styles">
-            <div class="result-title-style">
-              <h3>Total</h3>
-              <p>/ person</p>
-            </div>
-            <div class="result-number-style">$32.79</div>
-          </div>
-          <button class="reset-button">RESET</button>
+          <i class="fa-solid fa-user input-icon"></i>
+          <input
+            class="people-amount-input"
+            type="text"
+            autocomplete="off"
+            autofocus
+            placeholder="0"
+            oninput="amountInput(event)"
+          />
         </div>
       </div>
+      <div class="tip-result">
+        <div class="tip-result-container" id="tip-result-container">
+          <!--  ADD BY JAVASCRIPT -->
+        </div>
+        <button class="reset-button" onclick="hi()">RESET</button>
+      </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
